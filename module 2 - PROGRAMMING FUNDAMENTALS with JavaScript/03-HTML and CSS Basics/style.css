@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(162, 142, 113);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+
+}
+
+p {
+    text-align: center;
+
+}
+
+.color-section {  width: 200px; margin: 100px auto;}
+.color-section div {display: inline-block;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+.red {background-color: red}
+.purple {background-color: purple;}
+.orange {background-color: orange;}
+
+.main-navigation li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.main-navigation a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 26px;
+}
+
+.main-navigation li:hover {
+    text-decoration: underline;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: flex-end;
+}
