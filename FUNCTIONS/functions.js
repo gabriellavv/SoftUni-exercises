@@ -8,3 +8,8 @@ function avgGrade(array) {
     }
     return sum / counter;
 }
+
+// проверява дали определен знак от стринг (string[0]) е число, връща true/false
+function isNumber(char) {
+    return /^\d$/.test(char);
+}
