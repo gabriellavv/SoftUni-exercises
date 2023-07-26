@@ -13,3 +13,24 @@ function avgGrade(array) {
 function isNumber(char) {
     return /^\d$/.test(char);
 }
+
+// проверява дали думата съдържа само малки и големи букви, без цифри и знаци, връща true/false
+function isContainsOnlyLetters(word) {
+    let transformedWord = word.toLowerCase();
+    let isValidWord = true;
+    for (let symbol of transformedWord) {
+        let current = symbol.charCodeAt(0);
+        if (!(current >= 97 && current <= 122)) {
+            isValidWord = false;
+            break;
+        } 
+    }
+     return isValidWord;
+}
+console.log(isContainsOnlyLetters("aaa6aa"));
+
+
+// проверка дали дадена буква е гласна:
+function vowelTest(s) {
+    return (/^[aeiou]$/i).test(s);
+  }
