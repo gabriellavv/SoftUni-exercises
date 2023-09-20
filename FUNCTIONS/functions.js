@@ -23,9 +23,9 @@ function isContainsOnlyLetters(word) {
         if (!(current >= 97 && current <= 122)) {
             isValidWord = false;
             break;
-        } 
+        }
     }
-     return isValidWord;
+    return isValidWord;
 }
 console.log(isContainsOnlyLetters("aaa6aa"));
 
@@ -33,4 +33,13 @@ console.log(isContainsOnlyLetters("aaa6aa"));
 // проверка дали дадена буква е гласна:
 function vowelTest(s) {
     return (/^[aeiou]$/i).test(s);
-  }
+}
+
+
+// различни опции за калкулиране във функция, които достъпваме с calculate.sum/calculate.multiplication
+function calculate(a, b) {
+    return {
+        sum: a + b,
+        multiplication: a * b,
+    }
+}
