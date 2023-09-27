@@ -1,0 +1,278 @@
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* NAVIGATION: */
+
+.navigation {
+    padding: 0 20px;
+}
+
+.navigation p {
+    display: inline-block;
+    font-size: 26px;
+    width: 630px;
+}
+
+.navigation p span {
+    font-size: 26px;
+    color: #50b9e1;
+}
+
+nav {
+    display: inline-block;
+
+}
+
+ul li {
+    display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+    padding-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #50b9e1;
+}
+
+body>header>section.navigation>nav>ul>li:nth-child(5) {
+    padding-right: 5px;
+}
+
+.navigation>nav>ul>li:nth-child(6)>ul li a i {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* SITE-HEADER: */
+
+section.site-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../Requirements-and-Resources/Images/kids_main.jpg') no-repeat center;
+    background-size: cover;
+
+}
+
+.site-header h1 {
+    font-size: 66px;
+    color: white;
+    margin: 0;
+    width: 560px;
+    padding: 200px 0 50px 100px;
+}
+
+.site-header button {
+    font-size: 26px;
+    background: transparent;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 0 200px 100px;
+}
+
+.site-header button:hover {
+    background-color: #50b9e1;
+    border-color: #50b9e1;
+}
+
+main section h2 {
+    font-family: "PT Serif", serif;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* welcome */
+
+body>main>section.Welcome {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 60%;
+    text-align: center;
+    color: #5a7c8a;
+}
+
+main section:nth-child(1) span {
+    color: #50b9e1;
+}
+
+body>main>section.Welcome>p:nth-child(2) {
+    margin-top: 45px;
+}
+
+
+/* offerts */
+body>main>section.offerts {
+    display: inline-block;
+    color: white;
+    font-family: "PT Serif", serif;
+    padding: 50px 0;
+    background: #43bae3;
+    text-align: center;
+}
+
+.offerts img {
+    width: 70px;
+}
+
+body>main>section.offerts ul li a {
+    color: white;
+}
+
+.offerts li {
+    width: 320px;
+    padding: 25px 50px;
+}
+
+body>main>section.offerts>ul {
+    padding: 0;
+}
+
+.offerts ul {
+    margin: 45px 0 30px 0;
+}
+
+
+
+
+/* camps */
+
+.camps {
+    color: #5a7c8a;
+    padding: 50px 0;
+    text-align: center;
+}
+
+body>main>section.camps>p {
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 0 30px 0;
+}
+
+.camps img {
+    width: 400px;
+    height: 220px;
+}
+
+.camps li {
+    width: 400px;
+}
+
+.camps ul {
+    padding: 0;
+    ;
+}
+
+.camps li:not(:last-child) {
+    padding-right: 45px;
+}
+
+
+/* info */
+
+.info {
+    padding: 5px 0 10px 0;
+    border-bottom: 2px solid #5a7c8a;
+}
+
+.info div:nth-child(1) {
+    display: inline-block;
+    width: 329px;
+    text-align: left;
+}
+
+.info div:nth-child(2) {
+    display: inline-block;
+    text-align: right;
+    margin: 0;
+}
+
+.info div p,
+.info div h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body>main>section.camps>ul>li>section.info>div:nth-child(1)>p {
+    margin: 0;
+    padding: 0;
+}
+
+body>main>section.camps>ul>li>section.info>div:nth-child(2)>p {
+    background-color: #43bae3;
+    color: white;
+    font-size: 34px;
+    padding: 5px;
+    display: inline-block;
+    width: 56px;
+}
+
+
+/* more info */
+.more-info {
+    text-align: left;
+}
+
+section.more-info button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background: transparent;
+    color: #43bae3;
+    border-width: 2px;
+    border-color: #43bae3;
+    border-style: solid;
+}
+
+section.more-info button:hover {
+    color: white;
+    background: #43bae3;
+}
+
+
+/* footer */
+footer {
+    font-size: 16px;
+    color: #5a7c8a;
+    background-color: #43bae3;
+}
+
+footer ul {
+    display: inline-block;
+    width: 800px;
+    text-align: right;
+    padding: 0 80px 0 0;
+}
+
+footer ul li a i {
+    border: 1px solid #5a7c8a;
+    border-radius: 50%;
+    padding: 5px;
+    color: #5a7c8a;
+    display: inline-block
+}
+
+footer ul li a i:hover {
+        color: black;
+      }
+
+footer p {
+    display: inline-block;
+    width: 400px;
+    text-align: right;
+}
