@@ -43,3 +43,12 @@ function calculate(a, b) {
         multiplication: a * b,
     }
 }
+
+
+
+ // показва колко дни има в зададения месец в конкретната година:
+function daysInAMonth(month, year) {
+    
+    let days = new Date(year, month, 0).getDate();
+    console.log(days)
+}
