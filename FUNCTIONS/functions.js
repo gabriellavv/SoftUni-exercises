@@ -96,3 +96,41 @@ function distance(_x1, _y1, _x2, _y2) {
         let dist = Math.sqrt(((_x2 - _x1) ** 2) + ((_y2 - _y1) ** 2));
         return Number.isInteger(dist);
     }
+
+
+// завъртане на стойностите в масив надясно - тоест последната стойност става първа
+function rotateArray(array, rotationsCount) {
+    for(let i = 1; i <= rotationsCount; i++) {
+        array.unshift(array.pop());
+    }
+    console.log(array.join(" "));
+}
+
+
+// сортиране на текст по възходящ и низходящ ред:
+function sortAlphabeticallyAscending( textA, textB) {
+    return textA.localeCompare(textB);
+}
+function sortAlphabeticallyDescending( textA, textB) {
+    return textB.localeCompare(textA);
+}
+// Или:
+array.sort((a, b) => a.length - b.length || a.localeCompare(b));
+    console.log(array.join("\n"));
+
+
+
+
+    
+//Сортиране по дължина и после по азбучен ред: 
+function sortAnArrayBy2Criteria(input) {
+
+    let sorted = input.sort((a, b) => {
+        if (a.length !== b.length) {
+            return a.length - b.length
+        }
+        return a.localeCompare(b);
+    });
+
+    console.log(sorted.join("\n"));
+}

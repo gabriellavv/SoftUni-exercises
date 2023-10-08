@@ -1,4 +1,4 @@
-function demo(matrix) {
+function magicMatrices(matrix) {
 
     let rowSum = 0;
     let isMagic = true;
@@ -51,7 +51,7 @@ function demo(matrix) {
     }
 }
 
-demo(
+magicMatrices(
     [[4, 5, 6],
     [6, 5, 4],
     [5, 5, 5]]);
