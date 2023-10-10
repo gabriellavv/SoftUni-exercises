@@ -46,9 +46,9 @@ function calculate(a, b) {
 
 
 
- // показва колко дни има в зададения месец в конкретната година:
+// показва колко дни има в зададения месец в конкретната година:
 function daysInAMonth(month, year) {
-    
+
     let days = new Date(year, month, 0).getDate();
     console.log(days)
 }
@@ -82,7 +82,7 @@ console.log(greatestCommonDivisorGCD(15, 5));      // 5
 
 // как да вземем последния ден на даден месец:
 function lastDayOfCurrentMonth() {
-    let myDate = new Date (2023, 1, 1, 0, 0 , 0)        // 1 февруари 2023 00:00:00
+    let myDate = new Date(2023, 1, 1, 0, 0, 0)        // 1 февруари 2023 00:00:00
     myDate.setMonth(myDate.getMonth() + 1);             // минаваме към следващия месец
 
     myDate.setDate(0);   // задаваме индекс 0 от датите на настоящия месец (март), което ни връща към последния ден на предходния месец (февруари)
@@ -93,14 +93,14 @@ function lastDayOfCurrentMonth() {
 
 // формулата за намиране на разстояние между 4 точки в координатна система:   
 function distance(_x1, _y1, _x2, _y2) {
-        let dist = Math.sqrt(((_x2 - _x1) ** 2) + ((_y2 - _y1) ** 2));
-        return Number.isInteger(dist);
-    }
+    let dist = Math.sqrt(((_x2 - _x1) ** 2) + ((_y2 - _y1) ** 2));
+    return Number.isInteger(dist);
+}
 
 
 // завъртане на стойностите в масив надясно - тоест последната стойност става първа
 function rotateArray(array, rotationsCount) {
-    for(let i = 1; i <= rotationsCount; i++) {
+    for (let i = 1; i <= rotationsCount; i++) {
         array.unshift(array.pop());
     }
     console.log(array.join(" "));
@@ -108,20 +108,14 @@ function rotateArray(array, rotationsCount) {
 
 
 // сортиране на текст по възходящ и низходящ ред:
-function sortAlphabeticallyAscending( textA, textB) {
+function sortAlphabeticallyAscending(textA, textB) {
     return textA.localeCompare(textB);
 }
-function sortAlphabeticallyDescending( textA, textB) {
+function sortAlphabeticallyDescending(textA, textB) {
     return textB.localeCompare(textA);
 }
-// Или:
-array.sort((a, b) => a.length - b.length || a.localeCompare(b));
-    console.log(array.join("\n"));
 
 
-
-
-    
 //Сортиране по дължина и после по азбучен ред: 
 function sortAnArrayBy2Criteria(input) {
 
@@ -133,4 +127,43 @@ function sortAnArrayBy2Criteria(input) {
     });
 
     console.log(sorted.join("\n"));
+}
+// Или:
+array.sort((a, b) => a.length - b.length || a.localeCompare(b));
+console.log(array.join("\n"));
+
+
+// сортиране на числа с обект като function library: 
+const compareNumbers = {
+    ascending: (a, b) => a - b,
+    descending: (a, b) => b - a,
+};                                 // достъпваме с compareNumbers.ascending(arrayOfNumbers - примерно);
+
+
+
+// HTML замяна на символи;
+function escape(par) {
+    return par.replace(/[&<>" –—©®™≈≠£€°]/g, (result) => {
+        const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "'": "&quot;",
+            " ": "&nbsp;",
+            "-": "&ndash;",
+            "—": "&mdash;",
+            "©": "&copy;",
+            "®": "&reg;",
+            "™": "&trade;",
+            "≈": "&asymp;",
+            "≠": "&ne;",
+            "£": "&pound;",
+            "€": "&euro;",
+            "°": "&deg;",
+        }
+        if (map[result]) {
+            return map[result];
+        }
+        return result;
+    })
 }
