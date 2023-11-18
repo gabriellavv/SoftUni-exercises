@@ -9,7 +9,7 @@ function generateReport() {
         } else {
             checkBox.push(false)
         }
-    })
+    });
 
 
     let trInTBodyElements = document.querySelectorAll("tbody tr");  // вземаме си всички редове
