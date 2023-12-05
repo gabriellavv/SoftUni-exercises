@@ -167,3 +167,15 @@ function escape(par) {
         return result;
     })
 }
+
+// UNIT TESTING:
+// config: in cmd -> npm init ; npm install ; npm install mocha ; npm install chai   "
+// and then open configutations(launch.json):  in "args" -> the second is "bdd" and the last is "${file}";
+const expect = require("chai").expect;   // assert or expect 
+const {sum} = require("./04-sumOfNumbers");
+
+describe("sum", function() {
+    it("should sum the numbers in array", () => {
+        expect(sum([1, 2, 3])).to.be.equal(6);
+    })
+});

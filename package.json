@@ -1,0 +1,23 @@
+{
+  "name": "softuni-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriellavv/SoftUni-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriellavv/SoftUni-exercises/issues"
+  },
+  "homepage": "https://github.com/gabriellavv/SoftUni-exercises#readme",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}
