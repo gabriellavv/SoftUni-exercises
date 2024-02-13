@@ -30,9 +30,6 @@ function solve() {
         // let newLI = document.createElement("li");
         ulCheckListRef.innerHTML = `<li class="event-content">
             <article>
-          <p>Begins: ${date} at: ${time}</p>
-          <p>In: ${place} </p>
-          <p>Event: ${eventValue} </p>
           <p>Contact: ${contacts} </p>
         </article>
         <button class="edit-btn">Edit</button>
