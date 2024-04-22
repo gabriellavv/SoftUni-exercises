@@ -93,7 +93,8 @@ function solution() {
 
     // 2.	Editing the information
     // The functionality here is the following: 
-    // •	When the "Edit" button is clicked, all of the information is loaded in the input fields from step 1 and all buttons in Preview section are removed while the ["Add"] button is enabled again.
+    // •	When the "Edit" button is clicked, all of the information is loaded
+    //  in the input fields from step 1 and all buttons in Preview section are removed while the ["Add"] button is enabled again.
     btnEditEl.addEventListener("click", editBtnFn);
     function editBtnFn(e) {
 
