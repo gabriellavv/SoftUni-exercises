@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Cookbook</title>
+    <link rel="stylesheet" href="static/site.css">
+    <link rel="stylesheet" href="static/recipe.css">
+    <link rel="stylesheet" href="static/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Cookbook</h1>
+        <nav>
+            <a href="index.html">Catalog</a>
+            <a class="active">Create Recipe</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>New Recipe</h2>
+            <form>
+                <label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+                <label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+                <label class="ml">Ingredients: <textarea name="ingredients"
+                        placeholder="Enter ingredients on separate lines"></textarea></label>
+                <label class="ml">Preparation: <textarea name="steps"
+                        placeholder="Enter preparation steps on separate lines"></textarea></label>
+                <input type="submit" value="Create Recipe">
+            </form>
+        </article>
+    </main>
+
+    <script>
+        const recipeForm = document.querySelector("form");
+        recipeForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(recipeForm);
+            let data = Object.fromEntries(formData.entries());
+            data.ingredients = data.ingredients.split("\n");
+            data.steps = data.steps.split("\n");
+
+            fetch("http://localhost:3030/data/recipes", {
+                method: "Post",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Authorization": sessionStorage.getItem("token")
+                },
+                body: JSON.stringify(data)
+            }).then(res => res.json())
+            .then(data => {
+               window.location.pathname = "module%203%20-%20JS%20ADVANCED/2.%20JS%20Applications/03.%20Data%20and%20Authentication%20-%20LAB/Cookbook%20-%20part%202/base/index.html"
+            })
+            .catch(err => {console.log(err)});
+        })
+    </script>
+</body>
+
+</html>

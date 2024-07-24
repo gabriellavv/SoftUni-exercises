@@ -1,12 +1,12 @@
 async function getRecipes() {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/recipes');
+    const response = await fetch('http://localhost:3030/data/recipes');
     const recipes = await response.json();
 
     return Object.values(recipes);
 }
 
 async function getRecipeById(id) {
-    const response = await fetch('http://localhost:3030/jsonstore/cookbook/details/' + id);
+    const response = await fetch('http://localhost:3030/data/recipes/' + id);
     const recipe = await response.json();
 
     return recipe;
@@ -54,6 +54,21 @@ window.addEventListener('load', async () => {
 
     main.innerHTML = '';
     cards.forEach(c => main.appendChild(c));
+
+
+    // Показване на бутоните в навигацията:
+    let userDiv = document.getElementById("user");
+    let guestDiv = document.getElementById("guest");
+    let token = sessionStorage.getItem("token");
+    if (token != null) {
+        userDiv.style.display = "inline";
+        guestDiv.style.display = "none";
+    } else {
+        userDiv.style.display = "none";
+        guestDiv.style.display = "inline";
+    }
+
+    handleLogout();
 });
 
 function e(type, attributes, ...content) {
@@ -79,4 +94,13 @@ function e(type, attributes, ...content) {
     });
 
     return result;
+}
+
+function handleLogout() {
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", async (e) => {
+       sessionStorage.removeItem("token");
+       window.location.pathname = "module%203%20-%20JS%20ADVANCED/2.%20JS%20Applications/03.%20Data%20and%20Authentication%20-%20LAB/Cookbook%20-%20part%202/base/index.html"
+        
+    })
 }
