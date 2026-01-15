@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 12,
+    "editor.fontSize": 20,
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "default",
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+    "workbench.preferredHighContrastColorTheme": "Default High Contrast"
+}
